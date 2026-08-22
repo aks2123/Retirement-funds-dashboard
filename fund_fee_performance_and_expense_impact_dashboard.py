@@ -80,6 +80,8 @@ if page == "Fees & Expenses":
     costs["Estimated Annual Cost"] = costs["Estimated Annual Cost"].map(lambda x: f"${x:,.2f}" if pd.notna(x) else "Not available")
     st.dataframe(costs, use_container_width=True, hide_index=True)
 
+    st.info("Did you know: You can also create a self-directed brokerage account which gives you a lot more options to select the low-cost funds and other funds")
+
 elif page == "Performance Comparison":
     st.header("Performance Comparison")
     st.write("Returns are total returns from the supplied fund documents. Periods longer than one year are annualized where the source reports them that way. FBGRX performance is dated Dec. 31, 2025; the other readable profiles are dated Jun. 30, 2026.")
